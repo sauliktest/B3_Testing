@@ -1,4 +1,4 @@
-name: Ruby
+name: B3 - UAT
 
 on:
   push:
@@ -11,25 +11,34 @@ permissions:
 
 jobs:
   test:
-
     runs-on: ubuntu-latest
     strategy:
       matrix:
         ruby-version: ['2.6', '2.7', '3.0']
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf
-      with:
-        ruby-version: ${{ matrix.ruby-version }}
-        bundler-cache: true
-    - name: Install dependencies
-      run: |
-        cd front  # Muda para o diretório 'front'
-        bundle install  # Instala as dependências do bundle
-    - name: Run Tests
-      run: bundle exec cucumber
-      env:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Set up Ruby (version 2.7.0 or higher)
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7.0'  # Garantir que a versão seja >= 2.7.0
+
+      - name: Update RubyGems to avoid version issues
+        run: gem update --system 3.2.3  # Atualizando RubyGems
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser
+          cd front  # Muda para o diretório 'front'
+          bundle install  # Instala as dependências do Gemfile
+
+      - name: Run Tests
+        run: bundle exec cucumber
+        env:
           DISPLAY: :99
           CHROME_BIN: /usr/bin/chromium-browser
+
+
