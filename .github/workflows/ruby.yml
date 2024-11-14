@@ -32,19 +32,17 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y chromium-browser
-          if [ -d "front" ]; then
-            cd front
-            bundle install  # Instala as dependências do Gemfile
-          else
-            echo "Diretório 'front' não encontrado!"
-            exit 1  # Falha se o diretório não for encontrado
-          fi
+          cd front  # Muda para o diretório 'front' onde o Gemfile está localizado
+          bundle install  # Instala as dependências do Gemfile
 
       - name: Run Tests
-        run: bundle exec cucumber
+        run: |
+          cd front  # Certifica-se de estar no diretório 'front' para rodar os testes
+          bundle exec cucumber  # Executa os testes
         env:
           DISPLAY: :99
           CHROME_BIN: /usr/bin/chromium-browser
+
 
 
 
