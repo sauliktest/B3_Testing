@@ -29,10 +29,15 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y chromium-browser
+          sudo apt-get install -y chromium-browser  # Tenta instalar via apt-get
+          sudo snap install chromium  # Alternativa para instalar via snap se o apt-get falhar
           cd front  # Navega para o diretório 'front' onde o Gemfile está localizado
           gem install rails  # Certifique-se de instalar o Rails antes de rodar o bundle
           bundle install  # Instala as dependências do Gemfile, incluindo Rails
+
+      - name: Check Chromium version
+        run: |
+          chromium-browser --version  # Verifica a versão do Chromium instalada
 
       - name: Run Tests
         run: |
@@ -42,6 +47,7 @@ jobs:
           DISPLAY: :99
           CHROME_BIN: /usr/bin/chromium-browser
           CHROMIUM_FLAGS: "--headless --no-sandbox --disable-dev-shm-usage --remote-debugging-port=9222"
+
 
 
 
