@@ -1,6 +1,6 @@
   
 # command line
-default: -p pretty -p html -p json -p chrome -p desenvolvimento -p sprint -p grade_aberta --retry 0 --publish-quiet
+default: -p pretty -p html -p json -p chrome_headless -p desenvolvimento -p sprint -p grade_aberta --retry 0 --publish-quiet
 #ci: -p progress -p html -p json -p chrome_headless -p producao --retry 1 --publish
 
 # report type
