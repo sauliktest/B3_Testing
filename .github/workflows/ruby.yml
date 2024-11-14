@@ -1,4 +1,4 @@
-name: B3 - UAT
+name: B3 - UAT Regressiont Test
 
 on:
   push:
