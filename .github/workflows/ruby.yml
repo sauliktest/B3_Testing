@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby-version: ['2.7', '3.0']
+        ruby-version: ['3.2']  # Forçando a versão 3.2
 
     steps:
       - name: Check out code
@@ -26,18 +26,17 @@ jobs:
           ruby-version: ${{ matrix.ruby-version }}
           bundler-cache: true
 
-      - name: Install dependencies
+      - name: Install Chromium browser
         run: |
           sudo apt-get update
-          sudo apt-get install -y chromium-browser  # Tenta instalar via apt-get
-          sudo snap install chromium  # Alternativa para instalar via snap se o apt-get falhar
-          cd front  # Navega para o diretório 'front' onde o Gemfile está localizado
-          gem install rails  # Certifique-se de instalar o Rails antes de rodar o bundle
-          bundle install  # Instala as dependências do Gemfile, incluindo Rails
+          sudo apt-get install -y chromium-browser  # Instalar o Chromium via apt-get
+          sudo snap install chromium  # Instalar o Chromium via snap (alternativa)
 
-      - name: Check Chromium version
+      - name: Install Ruby dependencies
         run: |
-          chromium-browser --version  # Verifica a versão do Chromium instalada
+          cd front  # Navega para o diretório 'front' onde o Gemfile está localizado
+          gem install rails  # Instala o Rails
+          bundle install  # Instala as dependências do Gemfile, incluindo Rails
 
       - name: Run Tests
         run: |
@@ -47,6 +46,7 @@ jobs:
           DISPLAY: :99
           CHROME_BIN: /usr/bin/chromium-browser
           CHROMIUM_FLAGS: "--headless --no-sandbox --disable-dev-shm-usage --remote-debugging-port=9222"
+
 
 
 
