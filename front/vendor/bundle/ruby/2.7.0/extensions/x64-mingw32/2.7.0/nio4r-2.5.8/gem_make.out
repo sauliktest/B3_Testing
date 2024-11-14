@@ -1,0 +1,14 @@
+current directory: C:/Users/silvio.cadmus/Downloads/prjs/PayCash/NB/front/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.8/ext/nio4r
+c:/Ruby27-x64/bin/ruby.exe -I c:/Ruby27-x64/lib/ruby/2.7.0 -r ./siteconf20240902-13200-e2833a.rb extconf.rb
+
+current directory: C:/Users/silvio.cadmus/Downloads/prjs/PayCash/NB/front/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.8/ext/nio4r
+make "DESTDIR=" clean
+make: *** Sem regra para processar o alvo 'clean' .  Pare.
+
+current directory: C:/Users/silvio.cadmus/Downloads/prjs/PayCash/NB/front/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.8/ext/nio4r
+make "DESTDIR="
+make: Nada a ser feito para 'all'. 
+
+current directory: C:/Users/silvio.cadmus/Downloads/prjs/PayCash/NB/front/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.8/ext/nio4r
+make "DESTDIR=" install
+make: Nada a ser feito para 'install'. 

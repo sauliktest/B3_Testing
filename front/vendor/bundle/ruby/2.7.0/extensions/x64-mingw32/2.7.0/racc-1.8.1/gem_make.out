@@ -1,0 +1,16 @@
+current directory: C:/Users/silvio.cadmus/Downloads/prjs/PayCash/NB/front/vendor/bundle/ruby/2.7.0/gems/racc-1.8.1/ext/racc/cparse
+c:/Ruby27-x64/bin/ruby.exe -I c:/Ruby27-x64/lib/ruby/2.7.0 -r ./siteconf20240902-13200-bxxg5i.rb extconf.rb
+creating Makefile
+
+current directory: C:/Users/silvio.cadmus/Downloads/prjs/PayCash/NB/front/vendor/bundle/ruby/2.7.0/gems/racc-1.8.1/ext/racc/cparse
+make "DESTDIR=" clean
+
+current directory: C:/Users/silvio.cadmus/Downloads/prjs/PayCash/NB/front/vendor/bundle/ruby/2.7.0/gems/racc-1.8.1/ext/racc/cparse
+make "DESTDIR="
+generating cparse-x64-mingw32.def
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: C:/Users/silvio.cadmus/Downloads/prjs/PayCash/NB/front/vendor/bundle/ruby/2.7.0/gems/racc-1.8.1/ext/racc/cparse
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20240902-13200-jl647n/racc

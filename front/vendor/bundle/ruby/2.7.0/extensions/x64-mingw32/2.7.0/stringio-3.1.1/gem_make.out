@@ -1,0 +1,16 @@
+current directory: C:/Users/silvio.cadmus/Downloads/prjs/PayCash/NB/front/vendor/bundle/ruby/2.7.0/gems/stringio-3.1.1/ext/stringio
+C:/Ruby27-x64/bin/ruby.exe -I C:/Ruby27-x64/lib/ruby/2.7.0 -r ./siteconf20240913-5988-1groao9.rb extconf.rb
+creating Makefile
+
+current directory: C:/Users/silvio.cadmus/Downloads/prjs/PayCash/NB/front/vendor/bundle/ruby/2.7.0/gems/stringio-3.1.1/ext/stringio
+make "DESTDIR=" clean
+
+current directory: C:/Users/silvio.cadmus/Downloads/prjs/PayCash/NB/front/vendor/bundle/ruby/2.7.0/gems/stringio-3.1.1/ext/stringio
+make "DESTDIR="
+generating stringio-x64-mingw32.def
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: C:/Users/silvio.cadmus/Downloads/prjs/PayCash/NB/front/vendor/bundle/ruby/2.7.0/gems/stringio-3.1.1/ext/stringio
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 stringio.so ./.gem.20240913-5988-8zr95p

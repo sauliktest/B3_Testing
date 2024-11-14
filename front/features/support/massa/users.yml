@@ -1,0 +1,17 @@
+ :user_valido:
+  :f_name: Silvio
+  :l_name: Tadeu
+  :Date_of_Birth: 08/27/1975
+  :street_address: Rua George Smith
+  :country: Brazil
+  :zipcode: 05074010
+  :city: Sao Paulo
+  :occupation: Employee
+  :website: https://sampleapp.tricentis.com/101/app.php
+
+
+ :user_valido_senha_invalida:
+  :_cpf:               967.662.310-50
+  :_senha_invalida:    222222   
+
+ 

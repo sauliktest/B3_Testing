@@ -1,0 +1,13 @@
+current directory: C:/Users/silvio.cadmus/Downloads/prjs/PayCash/NB/front/vendor/bundle/ruby/2.7.0/gems/json-2.5.1/ext/json
+c:/Ruby27-x64/bin/ruby.exe -I c:/Ruby27-x64/lib/ruby/2.7.0 -r ./siteconf20240902-13200-dlybh0.rb extconf.rb
+creating Makefile
+
+current directory: C:/Users/silvio.cadmus/Downloads/prjs/PayCash/NB/front/vendor/bundle/ruby/2.7.0/gems/json-2.5.1/ext/json
+make "DESTDIR=" clean
+
+current directory: C:/Users/silvio.cadmus/Downloads/prjs/PayCash/NB/front/vendor/bundle/ruby/2.7.0/gems/json-2.5.1/ext/json
+make "DESTDIR="
+make: Nada a ser feito para 'all'. 
+
+current directory: C:/Users/silvio.cadmus/Downloads/prjs/PayCash/NB/front/vendor/bundle/ruby/2.7.0/gems/json-2.5.1/ext/json
+make "DESTDIR=" install

@@ -1,0 +1,19 @@
+current directory: C:/Users/silvio.cadmus/Downloads/prjs/PayCash/NB/front/vendor/bundle/ruby/2.7.0/gems/io-wait-0.2.1/ext/io/wait
+c:/Ruby27-x64/bin/ruby.exe -I c:/Ruby27-x64/lib/ruby/2.7.0 -r ./siteconf20240902-13200-18uj77b.rb extconf.rb
+checking for rb_io_wait()... no
+checking for rb_w32_ioctlsocket() in ruby.h... yes
+checking for rb_w32_is_socket() in ruby.h... yes
+creating Makefile
+
+current directory: C:/Users/silvio.cadmus/Downloads/prjs/PayCash/NB/front/vendor/bundle/ruby/2.7.0/gems/io-wait-0.2.1/ext/io/wait
+make "DESTDIR=" clean
+
+current directory: C:/Users/silvio.cadmus/Downloads/prjs/PayCash/NB/front/vendor/bundle/ruby/2.7.0/gems/io-wait-0.2.1/ext/io/wait
+make "DESTDIR="
+generating wait-x64-mingw32.def
+compiling wait.c
+linking shared-object io/wait.so
+
+current directory: C:/Users/silvio.cadmus/Downloads/prjs/PayCash/NB/front/vendor/bundle/ruby/2.7.0/gems/io-wait-0.2.1/ext/io/wait
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 wait.so ./.gem.20240902-13200-11inobc/io
