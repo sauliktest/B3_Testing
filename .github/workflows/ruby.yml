@@ -28,7 +28,8 @@ jobs:
       run: |
         cd front  # Muda para o diretório 'front'
         bundle install  # Instala as dependências do bundle
-    - name: Run tests
-      run: |
-        cd front  # Garante que está no diretório correto
-        bundle exec cucumber  # Executa os testes
+    - name: Run Tests
+      run: bundle exec cucumber
+      env:
+          DISPLAY: :99
+          CHROME_BIN: /usr/bin/chromium-browser
