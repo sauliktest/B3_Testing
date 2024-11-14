@@ -40,6 +40,8 @@ jobs:
         env:
           DISPLAY: :99
           CHROME_BIN: /usr/bin/chromium-browser
+          CHROMIUM_FLAGS: "--headless --no-sandbox --disable-dev-shm-usage --remote-debugging-port=9222"
+
 
 
 
