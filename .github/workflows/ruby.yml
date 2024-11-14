@@ -5,6 +5,8 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  schedule:
+    - cron: '0 19 * * 1-5'  # Executa de segunda a sexta-feira às 19:00 (UTC)
 
 permissions:
   contents: read
@@ -14,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby-version: ['3.2']  # Forçando a versão 3.2
+        ruby-version: ['3.2']  # Usando Ruby 3.2
 
     steps:
       - name: Check out code
@@ -35,8 +37,7 @@ jobs:
       - name: Install Ruby dependencies
         run: |
           cd front  # Navega para o diretório 'front' onde o Gemfile está localizado
-          gem install rails  # Instala o Rails
-          bundle install  # Instala as dependências do Gemfile, incluindo Rails
+          bundle install  # Instala todas as dependências do Gemfile, incluindo Rails
 
       - name: Run Tests
         run: |
@@ -46,6 +47,7 @@ jobs:
           DISPLAY: :99
           CHROME_BIN: /usr/bin/chromium-browser
           CHROMIUM_FLAGS: "--headless --no-sandbox --disable-dev-shm-usage --remote-debugging-port=9222"
+
 
 
 
